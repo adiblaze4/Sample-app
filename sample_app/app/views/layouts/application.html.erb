@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= render 'layouts/rails_default' %> <!-- REMOVING DEFAULT TAG STYLE SHEET AND js-->
+
+    <%= render 'layouts/shim' %> <!--to remove the above comment code for dry  / to see the code go to _shim.html.erb partial -->
+  </head>
+
+  <body>
+    <%= render 'layouts/header' %> <!-- to see nav header code html go to partial _header.html.erb in layouts -->
+
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %> <!-- to see footer code html go to partial _footer .html.erb in layouts -->
+    </div>
+  </body>
+</html>
